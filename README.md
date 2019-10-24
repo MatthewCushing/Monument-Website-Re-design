@@ -1,6 +1,6 @@
 # Monument Website Redesign
 
-This work was done for my Web Design II class at Colorado Technical University
+This work was done for my 5 1/2 week Web Design II class at Colorado Technical University
 
 Requirements:
  - Can only use HTML and CSS
@@ -17,6 +17,8 @@ Assignments:
  - Write the CSS for the landing page
 
 Will add to this "Read Me" and the website as the class goes on.
+
+Live Site via Netlify: https://friendly-ptolemy-b607cc.netlify.com/
 
 ---
 
