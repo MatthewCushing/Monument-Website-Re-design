@@ -27,19 +27,13 @@
 
     html {
         background-color: var(--bg-color);
-        font-size: 16px;
+        font-size: 100%;
     }
 
     body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto auto;
-        /*
-           Had to add the tag below to get rid of overflow which
-           gave me a horizontal scroll bar caused by the margins
-           in the first row
-         */
-        overflow-x: hidden;
     }
 
     button {
