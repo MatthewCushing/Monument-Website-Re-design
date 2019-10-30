@@ -1,0 +1,26 @@
+{
+    "name": "monument-website-re-design",
+    "version": "1.0.0",
+    "description": "This work was done for my 5 1/2 week Web Design II class at Colorado Technical University",
+    "main": "index.js",
+    "scripts": {
+        "start": "run-script-os",
+        "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'firefox-dev'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cushmatt/Monument-Website-Re-design.git"
+    },
+    "keywords": [],
+    "author": "Matthew Cushing",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cushmatt/Monument-Website-Re-design/issues"
+    },
+    "homepage": "https://github.com/cushmatt/Monument-Website-Re-design#readme",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "prettier": "^1.18.2",
+        "run-script-os": "^1.0.7"
+    }
+}
