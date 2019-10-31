@@ -1,5 +1,5 @@
 /*
- * ─── ROOT SPACING ───────────────────────────────────────────────────────────────
+ * ─── ROOT ───────────────────────────────────────────────────────────────
  */
 
 :root {
@@ -33,6 +33,11 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 button {
@@ -771,14 +776,157 @@ svg .b {
 }
 
 /*
-     * ─── COPYRIGHT ──────────────────────────────────────────────────────────────────
-     */
+* ─── COPYRIGHT ──────────────────────────────────────────────────────────────────
+*/
 
 #copyright {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     justify-self: center;
     margin-top: 2rem;
+}
+
+/*
+ * ─── EVENT OVERVIEW PAGE ────────────────────────────────────────────────────────
+ */
+
+#event-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.event-card {
+    width: 90%;
+    margin-bottom: 10%;
+    display: grid;
+    height: 30rem;
+    border-radius: 3px;
+    background-color: green;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.event-overlay {
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    z-index: 1;
+    opacity: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.event-card:hover .event-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.event-card > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+.event-sub {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    align-self: end;
+    background: rgba(0, 0, 0, 0.5);
+    height: 20%;
+    z-index: 2;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: white;
+}
+
+.event-subtitle {
+    font-size: 30px;
+    font-family: var(--font-header);
+    font-weight: 400;
+}
+
+.event-subpar {
+    font-size: 18px;
+    font-family: var(--font-paragraph);
+    font-weight: 400;
+}
+
+.events-button {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-paragraph);
+    font-size: 18px;
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-out 0.5s;
+}
+
+.event-card:hover .events-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*
+ * ─── EVENT PAGES ─────────────────────────────────────────────────────────────
+ */
+
+main {
+    margin: 4rem 13.02vw;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event-content,
+.event-images {
+    flex-basis: 48%;
+}
+
+.event-images > img {
+    width: 100%;
+}
+
+.event-flyer {
+    margin-top: 2rem;
+    border-radius: 2px;
+}
+
+.event-content h1 {
+    font-size: 60px;
+    font-family: var(--font-header);
+}
+
+.event-content h2 {
+    font-size: 35px;
+    font-weight: 400;
+    font-family: var(--font-header);
+    margin-top: 2rem;
+}
+
+.event-par {
+    font-size: 18px;
+    font-family: var(--font-paragraph);
+    margin-bottom: 1em;
 }
 
 /*
