@@ -1,594 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/wwb7dwo.css">
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Monument</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://use.typekit.net/wwb7dwo.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Monument</title>
+    </head>
+    <body>
+        <!--Header-->
+        <header>
+            <img
+                id="logo"
+                alt="Monument Logo"
+                src="./images/Monument_Logo@2x.png"
+            />
 
-    <!--Header-->
-    <header>
+            <div id="title">
+                <h1>MONUMENT</h1>
+                <div id="title-underline"></div>
+                <h2>COLORADO</h2>
+            </div>
 
-        <img id="logo" alt="Monument Logo" src="./images/Monument_Logo@2x.png" />
-
-        <div id="title">
-            <h1>MONUMENT</h1>
-            <div id="title-underline"></div>
-            <h2>COLORADO</h2>
-        </div>
-
-        <div id="login">
-            <label class="label-1">Username:</label>
-            <input class="input-1" type="text" />
-            <img class='svg-1' src="images/username.svg" />
-            <label class="label-2">Password:</label>
-            <input class="input-2" type="password" />
-            <img class="svg-2" src="images/password.svg" />
-            <!-- <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="14.941" height="22.3" viewBox="0 0 14.941 22.3"><defs><style>.a{opacity:0.5;}.b{fill:#659d89;}</style></defs><g class="a" transform="translate(-51.8 -73.762)"><g transform="translate(51.8 73.762)"><path class="b" d="M27.307,4.9h-.222A5.562,5.562,0,0,0,21.8,10.531v1.778h-.123a1.444,1.444,0,0,0-1.457,1.457v6.742a1.444,1.444,0,0,0,1.457,1.457H32.864a1.444,1.444,0,0,0,1.457-1.457V13.766a1.444,1.444,0,0,0-1.457-1.457h-.049V10.382A5.507,5.507,0,0,0,27.307,4.9Zm1.037,13.928a.274.274,0,0,1-.272.321h-1.63a.274.274,0,0,1-.272-.321l.321-1.531a1.207,1.207,0,0,1,.617-2.124h.148a1.211,1.211,0,0,1,.766,2.149Zm2.05-6.52H24.2V10.481A3.165,3.165,0,0,1,26.986,7.3c.1,0,.2-.025.3-.025a3.114,3.114,0,0,1,3.112,3.112v1.926ZM20.467,25.694a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1L19.8,25l.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346v-.815H21.7V24.9a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4c-.049.025-.123.074-.173.1a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.321.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.458,1.458,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543Zm5.556-.2a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.457,1.457,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.691.37-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346v-.815h.667V24.9a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C26.147,25.447,26.073,25.471,26.023,25.5Zm3.927,0a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.458,1.458,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4L28,24.484l.667.4a1.539,1.539,0,0,1,.3.222,1.458,1.458,0,0,1-.049-.346V23.94h.667v.988a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C30.073,25.447,30,25.471,29.95,25.5Zm3.927,0a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.457,1.457,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346V23.94h.667v.988a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C34,25.447,33.926,25.471,33.876,25.5Z" transform="translate(-19.8 -4.9)"/></g></g></svg> -->
-            <button type="button" class="first-button button-small button-secondary" >Create an Account</button>
-            <button type="button" class="second-button button-small button-primary">
-                Login
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18.064"
-                    height="21.679"
-                    class="svg-icon"
-                    viewBox="0 0 18.064 21.679"
-                    fill="white"
-                    id="login-icon"
+            <div id="login">
+                <label class="label-1">Username:</label>
+                <input class="input-1" type="text" />
+                <img class="svg-1" src="images/username.svg" />
+                <label class="label-2">Password:</label>
+                <input class="input-2" type="password" />
+                <img class="svg-2" src="images/password.svg" />
+                <!-- <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="14.941" height="22.3" viewBox="0 0 14.941 22.3"><defs><style>.a{opacity:0.5;}.b{fill:#659d89;}</style></defs><g class="a" transform="translate(-51.8 -73.762)"><g transform="translate(51.8 73.762)"><path class="b" d="M27.307,4.9h-.222A5.562,5.562,0,0,0,21.8,10.531v1.778h-.123a1.444,1.444,0,0,0-1.457,1.457v6.742a1.444,1.444,0,0,0,1.457,1.457H32.864a1.444,1.444,0,0,0,1.457-1.457V13.766a1.444,1.444,0,0,0-1.457-1.457h-.049V10.382A5.507,5.507,0,0,0,27.307,4.9Zm1.037,13.928a.274.274,0,0,1-.272.321h-1.63a.274.274,0,0,1-.272-.321l.321-1.531a1.207,1.207,0,0,1,.617-2.124h.148a1.211,1.211,0,0,1,.766,2.149Zm2.05-6.52H24.2V10.481A3.165,3.165,0,0,1,26.986,7.3c.1,0,.2-.025.3-.025a3.114,3.114,0,0,1,3.112,3.112v1.926ZM20.467,25.694a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1L19.8,25l.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346v-.815H21.7V24.9a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4c-.049.025-.123.074-.173.1a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.321.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.458,1.458,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543Zm5.556-.2a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.457,1.457,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.691.37-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346v-.815h.667V24.9a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C26.147,25.447,26.073,25.471,26.023,25.5Zm3.927,0a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.458,1.458,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4L28,24.484l.667.4a1.539,1.539,0,0,1,.3.222,1.458,1.458,0,0,1-.049-.346V23.94h.667v.988a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C30.073,25.447,30,25.471,29.95,25.5Zm3.927,0a.458.458,0,0,1-.173.049,1.164,1.164,0,0,1,.37.148l.667.4-.346.568-.667-.4a1.539,1.539,0,0,1-.3-.222,1.457,1.457,0,0,1,.049.346V27.2h-.667v-.988a.458.458,0,0,1,.049-.173l-.123.123c-.049.025-.1.074-.148.1l-.667.4-.321-.543.667-.4a1.32,1.32,0,0,1,.346-.148.458.458,0,0,1-.173-.049.619.619,0,0,1-.173-.1l-.667-.4.321-.543.667.4a1.539,1.539,0,0,1,.3.222,1.457,1.457,0,0,1-.049-.346V23.94h.667v.988a.458.458,0,0,1-.049.173l.123-.123c.049-.025.1-.074.148-.1l.667-.4.321.543-.667.4C34,25.447,33.926,25.471,33.876,25.5Z" transform="translate(-19.8 -4.9)"/></g></g></svg> -->
+                <button
+                    type="button"
+                    class="first-button button-small button-secondary"
                 >
-                    <path class="a" d="M17.645,29.862H10.42v3.615h7.225v3.612l7.227-5.42-7.227-5.42Z" transform="translate(-10.42 -20.83)"/>
-                    <path class="a" d="M26.25,2.5V9.727h1.807V4.307H38.9V22.371H28.057v-5.42H26.25v7.227H40.7V2.5Z" transform="translate(-22.638 -2.5)"/>
-                </svg>
-            </button>
-        </div>
-
-    </header>
-
-
-
-    <!--Navbar-->
-    <nav class="dropdown">
-        <div class="container">
-            <div class="menu-main">
-
-                <!--Government Menu-->
-                <button class="side-border dropdown-1">
-                    GOVERNMENT
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="15" fill="black">
-                        <polygon points="20,0 50,50 80,0">
-                    </svg>
+                    Create an Account
                 </button>
-
-                <div class="menu-sub-1 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category"><a href="#">Packets, Agendas, and Minutes</a></h3>
-                        <h3 class="menu-category"><a href="#">Boards & Commissions</a></h3>
-                        <ul>
-                            <li><a href="#">Available Board Openings</a></li>
-                            <li><a href="#">Board of Adjustment</a></li>
-                            <li><a href="#">Board of Trustees</a></li>
-                            <li><a href="#">Planning Commission</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-2">
-                        <h3 class="menu-category"><a href="#">Departments</a></h3>
-                        <ul>
-                            <li><a href="#">Cemetery</a></li>
-                            <li><a href="#">Finance Department</a></li>
-                            <li><a href="#">Human Resources</a></li>
-                            <li><a href="#">Municipal Court</a></li>
-                            <li><a href="#">Parks</a></li>
-                            <li><a href="#">Planning</a></li>
-                            <li><a href="#">Police Department</a></li>
-                            <li><a href="#">Public Works</a></li>
-                            <li><a href="#">Town Clerk</a></li>
-                            <li><a href="#">Town Manager</a></li>
-                            <li><a href="#">Water</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-3">
-                        <h3 class="menu-category"><a href="#">Elections</a></h3>
-                        <ul>
-                            <li><a href="#">Elected State & Local Officials</a></li>
-                            <li><a href="#">Local Officials</a></li>
-                            <li><a href="#">Election Results</a></li>
-                            <li><a href="#">Voter Registration</a></li>
-                        </ul>
-                        <h3 class="menu-category"><a href="#">Monument Municipal Code</a></h3>
-                        <ul>
-                            <li><a href="#">Code Enforcement</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-4">
-                        <h3 class="menu-category"><a href="#">Transparency</a></h3>
-                        <ul>
-                            <li><a href="#">Agendas & Minutes</a></li>
-                            <li><a href="#">Financials/Budgets</a></li>
-                            <li><a href="#">Public Notices</a></li>
-                            <li><a href="#">Public Records Request</a></li>
-                            <li><a href="#">Request for Proposals</a></li>
-                            <li><a href="#">Watch Meetings</a></li>
-                        </ul>
-                        <h3 class="menu-category"><a href="#">Staff Directory</a></h3>
-                        <h3 class="menu-category"><a href="#">Vision, Mission, and Values</a></h3>
-                    </div>
-                </div>
-
-
-                <!--Services Menu-->
-                <button onclick="dropdownMenu2()" class="border-right dropdown-2">
-                    SERVICES
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="15" fill="black">
-                        <polygon points="20,0 50,50 80,0">
-                    </svg>
-                </button>
-
-                <div class="menu-sub-2 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category"><a href="#">Alerts</a></h3>
-                        <h3 class="menu-category"><a href="#">Fingerprinting Services</a></h3>
-                    </div>
-
-                    <div id="menu-column-2">
-                        <h3 class="menu-category"><a href="#">Inform the Town</a></h3>
-                        <h3 class="menu-category"><a href="#">Online Payments</a></h3>
-                    </div>
-
-                    <div id="menu-column-3">
-                        <h3 class="menu-category"><a href="#">Park Reservations</a></h3>
-                        <h3 class="menu-category"><a href="#">Permits</a></h3>
-                    </div>
-
-                    <div id="menu-column-4">
-                        <h3 class="menu-category"><a href="#">Public Dumpster</a></h3>
-                        <h3 class="menu-category"><a href="#">Snow Plowing</a></h3>
-                    </div>
-                </div>
-
-
-                <!--Business Menu-->
-                <button onclick="dropdownMenu3()" class="border-right dropdown-3">
-                    BUSINESS
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="15" fill="black">
-                        <polygon points="20,0 50,50 80,0">
-                    </svg>
-                </button>
-
-                <div class="menu-sub-3 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category"><a href="#">Business Direectory</a></h3>
-                        <h3 class="menu-category"><a href="#">Business Licenses</a></h3>
-                        <h3 class="menu-category"><a href="#">Business Spotlight</a></h3>
-                    </div>
-
-                    <div id="menu-column-2">
-                        <h3 class="menu-category"><a href="#">Economic Development</a></h3>
-                        <ul>
-                            <li><a href="#">Demographics</a></li>
-                            <li><a href="#">Business Grants</a></li>
-                            <li><a href="#">Enterprise Zone</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-3">
-                        <h3 class="menu-category"><a href="#">Business Watch</a></h3>
-                    </div>
-
-                    <div id="menu-column-4">
-                        <h3 class="menu-category"><a href="#">Liquor Licenses</a></h3>
-                        <h3 class="menu-category"><a href="#">Planning & Development Requirements</a></h3>
-                    </div>
-                </div>
-                <button onclick="dropdownMenu4()" class="border-right dropdown-4">
-                    COMMUNITY
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="15" fill="black">
-                        <polygon points="20,0 50,50 80,0">
-                    </svg>
-                </button>
-
-                <div class="menu-sub-4 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category"><a href="#">Demographics</a></h3>
-                        <h3 class="menu-category"><a href="#">History, Arts, and Culture</a></h3>
-                        <ul>
-                            <li><a href="#">Call to Artists</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-2">
-                        <h3 class="menu-category"><a href="#">Community Events</a></h3>
-                        <ul>
-                            <li><a href="#">Memorial Day Ceremony</a></li>
-                            <li><a href="#">Memorial Movie Nights</a></li>
-                            <li><a href="#">Tri-Lakes 4th of July</a></li>
-                            <li><a href="#">Special Event Permits</a></li>
-                            <li><a href="#">Monument Tree Lighting</a></li>
-                            <li><a href="#">Monument's 140th Anniversary</a></li>
-                            <li><a href="#">Town Hall Trick or Treat</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-3">
-                        <h3 class="menu-category"><a href="#">Volunteer</a></h3>
-                        <ul>
-                            <li><a href="#">Spirit of Monument Award</a></li>
-                        </ul>
-
-                        <h3 class="menu-category"><a href="#">Resident Resources</a></h3>
-                        <h3 class="menu-category"><a href="#">Photo Gallery</a></h3>
-                        <h3 class="menu-category"><a href="#">Community News</a></h3>
-                    </div>
-
-                    <div id="menu-column-4">
-                        <h3 class="menu-category"><a href="#">Jobs</a></h3>
-                        <h3 class="menu-category"><a href="#">Parks & Facilities</a></h3>
-                        <h3 class="menu-category"><a href="#">Press Releases</a></h3>
-                        <h3 class="menu-category"><a href="#">Town of Monument Newsletter</a></h3>
-                        <h3 class="menu-category"><a href="#">Special Event Permits</a></h3>
-                        <h3 class="menu-category"><a href="#">Garden & Landscaping</a></h3>
-                    </div>
-                </div>
-
-
-                <!--Questions Menu-->
-                <button onclick="dropdownMenu5()" class="border-right dropdown-5">
-                    QUESTIONS
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="15" fill="black">
-                        <polygon points="20,0 50,50 80,0">
-                    </svg>
-                </button>
-
-                <div class="menu-sub-5 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category"><a href="#">Apply For</a></h3>
-                        <ul>
-                            <li><a href="#">Board Openings</a></li>
-                            <li><a href="#">Business License</a></li>
-                            <li><a href="#">Permits</a></li>
-                            <li><a href="#">Town Jobs</a></li>
-                        </ul>
-
-                        <h3 class="menu-category"><a href="#">Contact</a></h3>
-                        <ul>
-                            <li><a href="#">Board of Trustees</a></li>
-                            <li><a href="#">Facility Locations and Hours</a></li>
-                            <li><a href="#">Police Department</a></li>
-                            <li><a href="#">Report a Concern</a></li>
-                            <li><a href="#">Town Staff</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-2">
-                        <h3 class="menu-category"><a href="#">Find</a></h3>
-                        <ul>
-                            <li><a href="#">Agendas, Minutes, and Meeting Packets</a></li>
-                            <li><a href="#">Board of Trustees Meeting Live Stream</a></li>
-                            <li><a href="#">Budget Reports</a></li>
-                            <li><a href="#">Do I Live In Monument?</a></li>
-                            <li><a href="#">Maps</a></li>
-                            <li><a href="#">Press Releases</a></li>
-                            <li><a href="#">Social Media</a></li>
-                            <li><a href="#">Water Rates & Fees</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-3">
-                        <h3 class="menu-category"><a href="#">Sign Up For</a></h3>
-                        <ul>
-                            <li><a href="#">Business Programs</a></li>
-                            <li><a href="#">Citizens Academy</a></li>
-                            <li><a href="#">Email & Text</a></li>
-                            <li><a href="#">Notifications</a></li>
-                            <li><a href="#">Explorer Program</a></li>
-                            <li><a href="#">Town Newsletter</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="menu-column-4">
-                        <h3 class="menu-category"><a href="#">Submit</a></h3>
-                        <ul>
-                            <li><a href="#">Board of Trustees</a></li>
-                            <li><a href="#">Agenda Proposals</a></li>
-                            <li><a href="#">Online Payments</a></li>
-                            <li><a href="#">Public Records Request</a></li>
-                            <li><a href="#">Bid Opportunities</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <!--Search Menu-->
-                <button onclick="dropdownMenu6()" class="border-right dropdown-6">
+                <button
+                    type="button"
+                    class="second-button button-small button-primary"
+                >
+                    Login
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="26.233"
-                        height="26.251"
-                        viewBox="0 0 26.233 26.251"
-                        id="search-icon"
+                        width="18.064"
+                        height="21.679"
+                        class="svg-icon"
+                        viewBox="0 0 18.064 21.679"
+                        fill="white"
+                        id="login-icon"
                     >
-                        <path d="M22.267,12.137A10.133,10.133,0,1,0,18.34,20.13l8.107,8.107,1.786-1.786-8.107-8.107A10.133,10.133,0,0,0,22.267,12.137Zm-10.133,7.6a7.6,7.6,0,1,1,7.6-7.6A7.6,7.6,0,0,1,12.133,19.737Z" transform="translate(-2 -1.985)"/>
+                        <path
+                            class="a"
+                            d="M17.645,29.862H10.42v3.615h7.225v3.612l7.227-5.42-7.227-5.42Z"
+                            transform="translate(-10.42 -20.83)"
+                        />
+                        <path
+                            class="a"
+                            d="M26.25,2.5V9.727h1.807V4.307H38.9V22.371H28.057v-5.42H26.25v7.227H40.7V2.5Z"
+                            transform="translate(-22.638 -2.5)"
+                        />
                     </svg>
                 </button>
+            </div>
+        </header>
 
-                <div class="menu-sub-6 menu-sub">
-                    <div id="menu-column-1">
-                        <h3 class="menu-category">SEARCH BAR WILL GO IN HERE</h3>
+        <!--Navbar-->
+        <nav class="dropdown">
+            <div class="container">
+                <div class="menu-main">
+                    <!--Government Menu-->
+                    <button class="side-border dropdown-1">
+                        GOVERNMENT
+                        <svg
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            width="15"
+                            fill="black"
+                        >
+                            <polygon points="20,0 50,50 80,0" />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-1 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                <a href="#">Packets, Agendas, and Minutes</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Boards & Commissions</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Available Board Openings</a>
+                                </li>
+                                <li><a href="#">Board of Adjustment</a></li>
+                                <li><a href="#">Board of Trustees</a></li>
+                                <li><a href="#">Planning Commission</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-2">
+                            <h3 class="menu-category">
+                                <a href="#">Departments</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Cemetery</a></li>
+                                <li><a href="#">Finance Department</a></li>
+                                <li><a href="#">Human Resources</a></li>
+                                <li><a href="#">Municipal Court</a></li>
+                                <li><a href="#">Parks</a></li>
+                                <li><a href="#">Planning</a></li>
+                                <li><a href="#">Police Department</a></li>
+                                <li><a href="#">Public Works</a></li>
+                                <li><a href="#">Town Clerk</a></li>
+                                <li><a href="#">Town Manager</a></li>
+                                <li><a href="#">Water</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-3">
+                            <h3 class="menu-category">
+                                <a href="#">Elections</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        >Elected State & Local Officials</a
+                                    >
+                                </li>
+                                <li><a href="#">Local Officials</a></li>
+                                <li><a href="#">Election Results</a></li>
+                                <li><a href="#">Voter Registration</a></li>
+                            </ul>
+                            <h3 class="menu-category">
+                                <a href="#">Monument Municipal Code</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Code Enforcement</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-4">
+                            <h3 class="menu-category">
+                                <a href="#">Transparency</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Agendas & Minutes</a></li>
+                                <li><a href="#">Financials/Budgets</a></li>
+                                <li><a href="#">Public Notices</a></li>
+                                <li><a href="#">Public Records Request</a></li>
+                                <li><a href="#">Request for Proposals</a></li>
+                                <li><a href="#">Watch Meetings</a></li>
+                            </ul>
+                            <h3 class="menu-category">
+                                <a href="#">Staff Directory</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Vision, Mission, and Values</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!--Services Menu-->
+                    <button
+                        onclick="dropdownMenu2()"
+                        class="border-right dropdown-2"
+                    >
+                        SERVICES
+                        <svg
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            width="15"
+                            fill="black"
+                        >
+                            <polygon points="20,0 50,50 80,0" />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-2 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                <a href="#">Alerts</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Fingerprinting Services</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-2">
+                            <h3 class="menu-category">
+                                <a href="#">Inform the Town</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Online Payments</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-3">
+                            <h3 class="menu-category">
+                                <a href="#">Park Reservations</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Permits</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-4">
+                            <h3 class="menu-category">
+                                <a href="#">Public Dumpster</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Snow Plowing</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!--Business Menu-->
+                    <button
+                        onclick="dropdownMenu3()"
+                        class="border-right dropdown-3"
+                    >
+                        BUSINESS
+                        <svg
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            width="15"
+                            fill="black"
+                        >
+                            <polygon points="20,0 50,50 80,0" />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-3 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                <a href="#">Business Direectory</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Business Licenses</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Business Spotlight</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-2">
+                            <h3 class="menu-category">
+                                <a href="#">Economic Development</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Demographics</a></li>
+                                <li><a href="#">Business Grants</a></li>
+                                <li><a href="#">Enterprise Zone</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-3">
+                            <h3 class="menu-category">
+                                <a href="#">Business Watch</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-4">
+                            <h3 class="menu-category">
+                                <a href="#">Liquor Licenses</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#"
+                                    >Planning & Development Requirements</a
+                                >
+                            </h3>
+                        </div>
+                    </div>
+                    <button
+                        onclick="dropdownMenu4()"
+                        class="border-right dropdown-4"
+                    >
+                        COMMUNITY
+                        <svg
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            width="15"
+                            fill="black"
+                        >
+                            <polygon points="20,0 50,50 80,0" />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-4 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                <a href="#">Demographics</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">History, Arts, and Culture</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Call to Artists</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-2">
+                            <h3 class="menu-category">
+                                <a href="#">Community Events</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Memorial Day Ceremony</a></li>
+                                <li><a href="#">Memorial Movie Nights</a></li>
+                                <li><a href="#">Tri-Lakes 4th of July</a></li>
+                                <li><a href="#">Special Event Permits</a></li>
+                                <li><a href="#">Monument Tree Lighting</a></li>
+                                <li>
+                                    <a href="#">Monument's 140th Anniversary</a>
+                                </li>
+                                <li>
+                                    <a href="#">Town Hall Trick or Treat</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-3">
+                            <h3 class="menu-category">
+                                <a href="#">Volunteer</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Spirit of Monument Award</a>
+                                </li>
+                            </ul>
+
+                            <h3 class="menu-category">
+                                <a href="#">Resident Resources</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Photo Gallery</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Community News</a>
+                            </h3>
+                        </div>
+
+                        <div id="menu-column-4">
+                            <h3 class="menu-category"><a href="#">Jobs</a></h3>
+                            <h3 class="menu-category">
+                                <a href="#">Parks & Facilities</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Press Releases</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Town of Monument Newsletter</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Special Event Permits</a>
+                            </h3>
+                            <h3 class="menu-category">
+                                <a href="#">Garden & Landscaping</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!--Questions Menu-->
+                    <button
+                        onclick="dropdownMenu5()"
+                        class="border-right dropdown-5"
+                    >
+                        QUESTIONS
+                        <svg
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            width="15"
+                            fill="black"
+                        >
+                            <polygon points="20,0 50,50 80,0" />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-5 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                <a href="#">Apply For</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Board Openings</a></li>
+                                <li><a href="#">Business License</a></li>
+                                <li><a href="#">Permits</a></li>
+                                <li><a href="#">Town Jobs</a></li>
+                            </ul>
+
+                            <h3 class="menu-category">
+                                <a href="#">Contact</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Board of Trustees</a></li>
+                                <li>
+                                    <a href="#">Facility Locations and Hours</a>
+                                </li>
+                                <li><a href="#">Police Department</a></li>
+                                <li><a href="#">Report a Concern</a></li>
+                                <li><a href="#">Town Staff</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-2">
+                            <h3 class="menu-category"><a href="#">Find</a></h3>
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        >Agendas, Minutes, and Meeting
+                                        Packets</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        >Board of Trustees Meeting Live
+                                        Stream</a
+                                    >
+                                </li>
+                                <li><a href="#">Budget Reports</a></li>
+                                <li><a href="#">Do I Live In Monument?</a></li>
+                                <li><a href="#">Maps</a></li>
+                                <li><a href="#">Press Releases</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Water Rates & Fees</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-3">
+                            <h3 class="menu-category">
+                                <a href="#">Sign Up For</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Business Programs</a></li>
+                                <li><a href="#">Citizens Academy</a></li>
+                                <li><a href="#">Email & Text</a></li>
+                                <li><a href="#">Notifications</a></li>
+                                <li><a href="#">Explorer Program</a></li>
+                                <li><a href="#">Town Newsletter</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="menu-column-4">
+                            <h3 class="menu-category">
+                                <a href="#">Submit</a>
+                            </h3>
+                            <ul>
+                                <li><a href="#">Board of Trustees</a></li>
+                                <li><a href="#">Agenda Proposals</a></li>
+                                <li><a href="#">Online Payments</a></li>
+                                <li><a href="#">Public Records Request</a></li>
+                                <li><a href="#">Bid Opportunities</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Search Menu-->
+                    <button
+                        onclick="dropdownMenu6()"
+                        class="border-right dropdown-6"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26.233"
+                            height="26.251"
+                            viewBox="0 0 26.233 26.251"
+                            id="search-icon"
+                        >
+                            <path
+                                d="M22.267,12.137A10.133,10.133,0,1,0,18.34,20.13l8.107,8.107,1.786-1.786-8.107-8.107A10.133,10.133,0,0,0,22.267,12.137Zm-10.133,7.6a7.6,7.6,0,1,1,7.6-7.6A7.6,7.6,0,0,1,12.133,19.737Z"
+                                transform="translate(-2 -1.985)"
+                            />
+                        </svg>
+                    </button>
+
+                    <div class="menu-sub-6 menu-sub">
+                        <div id="menu-column-1">
+                            <h3 class="menu-category">
+                                SEARCH BAR WILL GO IN HERE
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-
-
-
-    <!--Section 01-->
-    <section id="row-1">
-
-        <div class="welcome-section">
-            <h1>Welcome to Beautiful Monument Colorado!</h1>
-            <div id="welcome-underline"></div>
-        </div>
-        <article id="welcome">
-            <img id="primary-image" src="./images/mountains@2x.png" alt="Picture of Mountains">
-            <h2 class="sub-title">Attractions</h2>
-            <p class="paragraph">
-                Wondering what to do in Monument? We offer more than 60 area attractions, including trains, museums, parks, a zoo and more. You’ll find no shortage of things to do in Monument, where the adventures range from mild to wild! Whether you’re looking for outdoor thrills, or educational and cultural activities, things to do in Monument are limitless.
-            </p>
-        </article>
-
-        <article class="welcome-margin secondary-topic">
-            <img class="welcome-secondary-image" src="./images/community@2x.png" alt="Picture of community">
-            <h2 class="sub-title">Community</h2>
-            <p class="paragraph">
-                We have a great community that really loves to work together. To get more info, check out the community section in the navigation bar.
-            </p>
-        </article>
-
-        <article class="secondary-topic">
-            <img class="welcome-secondary-image" src="./images/snowboarding@2x.png" alt="Picture of snowboarding">
-            <h2 class="sub-title">Events</h2>
-            <p class="paragraph">
-                We have great events throughout the year including monthly discounted trips to resorts like Copper!
-            </p>
-        </article>
-
-    </section>
-
-
-
-    <!--Section 02-->
-    <div class="bg-container">
-        <section id="row-2">
-
-            <div class="upcoming-events">
-                <h1>UPCOMING EVENTS</h1>
-                <div id="event-underline"></div>
+        <!--Section 01-->
+        <section id="row-1">
+            <div class="welcome-section">
+                <h1>Welcome to Beautiful Monument Colorado!</h1>
+                <div id="welcome-underline"></div>
             </div>
+            <article id="welcome">
+                <img
+                    id="primary-image"
+                    src="./images/mountains@2x.png"
+                    alt="Picture of Mountains"
+                />
+                <h2 class="sub-title">Attractions</h2>
+                <p class="paragraph">
+                    Wondering what to do in Monument? We offer more than 60 area
+                    attractions, including trains, museums, parks, a zoo and
+                    more. You’ll find no shortage of things to do in Monument,
+                    where the adventures range from mild to wild! Whether you’re
+                    looking for outdoor thrills, or educational and cultural
+                    activities, things to do in Monument are limitless.
+                </p>
+            </article>
 
-            <div class="event-row-1">
+            <article class="welcome-margin secondary-topic">
+                <img
+                    class="welcome-secondary-image"
+                    src="./images/community@2x.png"
+                    alt="Picture of community"
+                />
+                <h2 class="sub-title">Community</h2>
+                <p class="paragraph">
+                    We have a great community that really loves to work
+                    together. To get more info, check out the community section
+                    in the navigation bar.
+                </p>
+            </article>
 
-                <!--Event 01-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/concert@2x.png" alt="Concert Picture">
-                        <figcaption>
-                            <h3>Great American Cleanup Pikes Peak</h3>
-                            <p>Saturday, April 27 9:00am - 12:00pm</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!--Event 02-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/flag@2x.png" alt="Flag Picture">
-                        <figcaption>
-                            <h3>Memorial Day Ceremony</h3>
-                            <p>Monday, May 27 10:00am</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!--Event 03-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/movie-cinema@2x.png" alt="Movie Theater Picture">
-                        <figcaption>
-                            <h3>Movie Nights</h3>
-                            <p>June - August</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="event-row-2">
-
-                <!--Event 04-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/conference@2x.png" alt="Conference Picture">
-                        <figcaption>
-                            <h3>Outpouring - Similar to Ted Talks</h3>
-                            <p>October 15, 2019, 5:00pm - 7:00pm</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!--Event 05-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/exposition@2x.png" alt="Community Expo Picture">
-                        <figcaption>
-                            <h3>Business and Community Expo</h3>
-                            <p>October 17, 2019, 4:00pm - 7:00pm</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!--Event 06-->
-                <div class="showcase">
-                    <figure>
-                        <img class="showcase-image" src="./images/halloween@2x.png" alt="Picture of Pumpkin">
-                        <figcaption>
-                            <h3>Town Hall Trick or Treat</h3>
-                            <p>October 31, 2019, 3:00pm - 5:00pm</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <button type="button" class="event-button button-primary button-small">
-                More Upcoming Events
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24.37"
-                    height="18.983"
-                    viewBox="0 0 24.37 18.983"
-                    id="arrow-icon"
-                >
-                    <g transform="translate(-219.5 -214.017)">
-                        <path class="a" d="M24.133,26.177l7.157-7.131a2.34,2.34,0,1,0-3.309-3.309l-3.155,3.155V4.834a2.334,2.334,0,1,0-4.669,0V18.892L17,15.762A2.347,2.347,0,0,0,13,17.4a2.271,2.271,0,0,0,.693,1.642l7.131,7.131a2.333,2.333,0,0,0,1.642.693A2.393,2.393,0,0,0,24.133,26.177Z" transform="translate(217 246) rotate(-90)"/>
-                    </g>
-                </svg>
-            </button>
-
-
+            <article class="secondary-topic">
+                <img
+                    class="welcome-secondary-image"
+                    src="./images/snowboarding@2x.png"
+                    alt="Picture of snowboarding"
+                />
+                <h2 class="sub-title">Events</h2>
+                <p class="paragraph">
+                    We have great events throughout the year including monthly
+                    discounted trips to resorts like Copper!
+                </p>
+            </article>
         </section>
-    </div>
 
-
-    <!--Section 03-->
-    <section id="row-3">
-
-        <article class="meetings">
-            <h1>MEETINGS</h1>
-            <div class="card-underline"></div>
-            <div class="card">
-                <img class="business-image" src="./images/meeting@2x.png" alt="Picture of Meeting">
-                <ul>
-                    <li><span>Town Hall Closed - Columbus Day</span><span class="card-detail">Mon Oct 14</span></li>
-                    <li><span>Monument Municipal Court</span><span class="card-detail">Wed Oct 16</span></li>
-                    <li><span>Board of Trustees Meeting</span><span class="card-detail">Mon Oct 21</span></li>
-                </ul>
-                <button type="button" class="button-secondary button-large">
-                    View All Meetings
-                </button>
-            </div>
-        </article>
-
-
-        <article class="projects">
-            <h1>PROJECTS</h1>
-            <div class="card-underline"></div>
-            <div class="card">
-                <img src="./images/construction_bw@2x.png" alt="Picture of Construction">
-                <ul>
-                    <li><span>Jackson Creek Townhomes</span><span class="card-detail">Under Construction</span></li>
-                    <li><span>KFC</span><span class="card-detail">Approved</span></li>
-                    <li><span>Sanctuary Pointe PHASE 3</span><span class="card-detail">Under Review</span></li>
-                </ul>
-                <button type="button" class="button-secondary button-large">
-                    View All Ongoing Projects
-                </button>
-            </div>
-        </article>
-
-    </section>
-
-
-
-    <!--Ads-->
-    <aside id="ads">
-        <img src="./images/ad01@2x.png" alt="Ad #1">
-        <img src="./images/ad02@2x.png" alt="Ad #2">
-        <img src="./images/ad03@2x.png" alt="Ad #3">
-    </aside>
-
-
-
-    <!--Footer-->
-    <footer>
-
-        <div id="footer-container">
-            <aside id="site-links">
-                <h3>SITE LINKS</h3>
-                <div id="site-links-container">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Printer Friendly</a></li>
-                        <li><a href="#">Email Page</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">RSS</a></li>
-                        <li><a href="#">Site Map</a></li>
-                        <li><a href="#">Translate Page</a></li>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="#">Documents</a></li>
-                    </ul>
+        <!--Section 02-->
+        <div class="bg-container">
+            <section id="row-2">
+                <div class="upcoming-events">
+                    <h1>UPCOMING EVENTS</h1>
+                    <div id="event-underline"></div>
                 </div>
-            </aside>
 
-            <aside id="social-media">
-                <h3>SOCIAL MEDIA</h3>
-
-                <div id="icon-container">
-                    <div class="circle-bg">
-                        <a href="https://www.facebook.com">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36.844" height="36.844" viewBox="0 0 36.844 36.844"><path class="icon facebook" d="M51.809,19H23.035A4.04,4.04,0,0,0,19,23.035V51.809a4.04,4.04,0,0,0,4.035,4.035h13a.594.594,0,0,0,.594-.594V41.9a.594.594,0,0,0-.594-.594H33.554v-3.1h2.478a.594.594,0,0,0,.594-.594v-.974c0-3.129.909-5.718,2.56-7.288a8.022,8.022,0,0,1,5.5-2.03,11.8,11.8,0,0,1,2.336.217v3.289a7.827,7.827,0,0,0-1.492-.137c-2.806,0-4.415,2.1-4.415,5.764v1.159a.594.594,0,0,0,.594.594h4.159l-1.017,3.1H41.754a.594.594,0,0,0-.594.594V55.25a.594.594,0,0,0,.594.594H51.809a4.04,4.04,0,0,0,4.035-4.035V23.035A4.04,4.04,0,0,0,51.809,19Zm2.847,32.809a2.85,2.85,0,0,1-2.847,2.847H42.349V42.491h2.93a.6.6,0,0,0,.565-.409L47.251,37.8a.595.595,0,0,0-.565-.78H42.3v-.564c0-2.087.56-4.576,3.227-4.576a6.079,6.079,0,0,1,1.9.279.595.595,0,0,0,.781-.564V27.064a.594.594,0,0,0-.446-.575,12.394,12.394,0,0,0-3.078-.357,9.219,9.219,0,0,0-6.316,2.356c-1.89,1.8-2.93,4.692-2.93,8.15v.38H32.959a.594.594,0,0,0-.594.594V41.9a.594.594,0,0,0,.594.594h2.478V54.656h-12.4a2.85,2.85,0,0,1-2.847-2.847V23.035a2.85,2.85,0,0,1,2.847-2.847H51.809a2.85,2.85,0,0,1,2.847,2.847Z" transform="translate(-19 -19)"/></svg>
-                        </a>
+                <div class="event-row-1">
+                    <!--Event 01-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/concert@2x.png"
+                                alt="Concert Picture"
+                            />
+                            <figcaption>
+                                <h3>Great American Cleanup Pikes Peak</h3>
+                                <p>Saturday, April 27 9:00am - 12:00pm</p>
+                            </figcaption>
+                        </figure>
                     </div>
 
-                    <div class="circle-bg">
-                        <a href="https://www.instagram.com">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="37.229" height="37.353" viewBox="0 0 37.229 37.353"><path class="icon instagram" d="M33.982,37.145a8.677,8.677,0,0,1,15.785,0h6.865V28.778a2.954,2.954,0,0,0-2.946-2.955H37.577v4.294a1.015,1.015,0,1,1-2.03,0V25.823h-.732v4.294a1.015,1.015,0,1,1-2.03,0V25.823h-.868v4.294a1.015,1.015,0,1,1-2.03,0V25.835a2.954,2.954,0,0,0-2.7,2.943v8.367h6.8ZM48.618,29.9a1.261,1.261,0,0,1,1.259-1.263h2.644A1.261,1.261,0,0,1,53.78,29.9v2.652a1.261,1.261,0,0,1-1.259,1.263H49.877a1.261,1.261,0,0,1-1.259-1.263Z" transform="translate(-23.294 -21.92)"/><path class="icon instragram" d="M86.805,91.489a4.465,4.465,0,1,0,4.465-4.48A4.477,4.477,0,0,0,86.805,91.489Z" transform="translate(-72.69 -72.612)"/><path class="icon instagram" d="M50.544,109.653c.013.2.023.4.023.6a8.694,8.694,0,1,1-17.387,0c0-.2.009-.4.023-.6H27.183v12.214a2.954,2.954,0,0,0,2.946,2.955H53.685a2.954,2.954,0,0,0,2.946-2.955V109.653Z" transform="translate(-23.293 -91.373)"/><path class="b" d="M34.893,3.064H11.336A6.855,6.855,0,0,0,4.5,9.923V33.558a6.855,6.855,0,0,0,6.836,6.859H34.892a6.855,6.855,0,0,0,6.836-6.859V9.923A6.855,6.855,0,0,0,34.893,3.064ZM11.095,6.98v4.282a1.015,1.015,0,1,0,2.03,0V6.967h.868v4.294a1.015,1.015,0,1,0,2.03,0V6.967h.732v4.294a1.015,1.015,0,1,0,2.03,0V6.967H34.892a2.954,2.954,0,0,1,2.946,2.955V18.29H30.973a8.677,8.677,0,0,0-15.785,0H8.39V9.923A2.954,2.954,0,0,1,11.095,6.98ZM27.546,21.941a4.465,4.465,0,1,1-4.465-4.48A4.478,4.478,0,0,1,27.546,21.941Zm7.347,14.573H11.336A2.954,2.954,0,0,1,8.39,33.558V21.344H14.41c-.013.2-.023.4-.023.6a8.694,8.694,0,1,0,17.387,0c0-.2-.009-.4-.023-.6h6.087V33.558A2.954,2.954,0,0,1,34.893,36.514Z" transform="translate(-4.5 -3.064)"/><path class="b" d="M153.422,47.4h2.644a1.261,1.261,0,0,0,1.259-1.263V43.483a1.261,1.261,0,0,0-1.259-1.263h-2.644a1.261,1.261,0,0,0-1.259,1.263v2.652A1.261,1.261,0,0,0,153.422,47.4Z" transform="translate(-126.838 -35.505)"/></svg>
-                        </a>
+                    <!--Event 02-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/flag@2x.png"
+                                alt="Flag Picture"
+                            />
+                            <figcaption>
+                                <h3>Memorial Day Ceremony</h3>
+                                <p>Monday, May 27 10:00am</p>
+                            </figcaption>
+                        </figure>
                     </div>
 
-                    <div class="circle-bg">
-                        <a href="https://www.twitter.com">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47.982" height="35.456" viewBox="0 0 47.982 35.456"><path class="icon twitter" d="M41.374,9.622c-.227-1.023-1.1-4.584-2.462-5.947L38.8,3.561A10.26,10.26,0,0,0,31.526.038,7.3,7.3,0,0,0,30.616,0c-3.788,0-5.909,2.235-7.462,4.432A16.989,16.989,0,0,0,21.26,8.75a16.785,16.785,0,0,1-2.008,4.47c-1.78,2.424-5,2.879-6.781,2.955h-.341a15.675,15.675,0,0,1-7.046-1.932,17.066,17.066,0,0,1-3.94-3.523L.274,9.7.123,11.023A49.191,49.191,0,0,0-.1,18.107a19.54,19.54,0,0,0,5.758,11.97c3.75,3.6,9.015,5.379,16.023,5.379,10.569,0,15.3-7.614,17.084-10.493a18.54,18.54,0,0,0,2.424-7.917l6.629-4.2Zm-1.25,6.818v.3a17.95,17.95,0,0,1-2.273,7.652c-1.7,2.727-6.174,9.962-16.1,9.962-6.7,0-11.667-1.667-15.228-5.076a18.367,18.367,0,0,1-5.417-11.25,37.979,37.979,0,0,1,.114-5.568,16.782,16.782,0,0,0,3.371,2.8,16.916,16.916,0,0,0,7.576,2.083h.379c1.97-.076,5.606-.606,7.652-3.409a19.033,19.033,0,0,0,2.159-4.773A17.448,17.448,0,0,1,24.1,5.152c1.439-2.121,3.258-4.015,6.515-4.015a6.421,6.421,0,0,1,.833.038A9.23,9.23,0,0,1,38,4.356l.114.114c1.1,1.1,1.97,4.432,2.2,5.644l.038.265,5.19,2.576Z" transform="translate(0.168)"/><path class="icon twitter wing" d="M36.122,42.7l-1.1.3.076,1.174a10.288,10.288,0,0,1-2.083,6.478c-1.553,1.894-3.94,2.955-7.084,3.22-.417.038-.833.038-1.25.038h0c-5.568,0-8.144-3.068-9.015-4.394l-.53-1.061-1.136.3.265.606c.114.227,2.689,5.644,10.379,5.644h0c.417,0,.871,0,1.326-.038,3.447-.265,6.1-1.477,7.879-3.636a11.658,11.658,0,0,0,2.311-7.993Z" transform="translate(-8.633 -26.525)"/><path class="icon twitter eye" d="M84.071,14.7a3.371,3.371,0,1,0,3.371,3.371A3.379,3.379,0,0,0,84.071,14.7Zm0,5.568a2.239,2.239,0,0,1-2.235-2.235,2.235,2.235,0,1,1,2.235,2.235Z" transform="translate(-50.067 -9.132)"/></svg>
-                        </a>
-                    </div>
-
-                    <div class="circle-bg">
-                        <a href="https://www.youtube.com">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="49.146" height="34.024" viewBox="0 0 49.146 34.024"><path class="icon youtube" d="M58.329,27.5H25.817A8.317,8.317,0,0,0,17.5,35.817v17.39a8.317,8.317,0,0,0,8.317,8.317H58.329a8.317,8.317,0,0,0,8.317-8.317V35.817A8.317,8.317,0,0,0,58.329,27.5ZM44.152,48.293l-7.372,3.78V36.951l7.372,3.78,7.372,3.78Z" transform="translate(-17.5 -27.5)"/></svg>
-                        </a>
+                    <!--Event 03-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/movie-cinema@2x.png"
+                                alt="Movie Theater Picture"
+                            />
+                            <figcaption>
+                                <h3>Movie Nights</h3>
+                                <p>June - August</p>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
 
-            </aside>
+                <div class="event-row-2">
+                    <!--Event 04-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/conference@2x.png"
+                                alt="Conference Picture"
+                            />
+                            <figcaption>
+                                <h3>Outpouring - Similar to Ted Talks</h3>
+                                <p>October 15, 2019, 5:00pm - 7:00pm</p>
+                            </figcaption>
+                        </figure>
+                    </div>
 
-            <aside id="contact">
-                <h3>CONTACT US</h3>
-                <ul>
-                    <li>Town of Monument</li>
-                    <li>645 Beacon Lite Road</li>
-                    <li>Monument, CO 80132</li>
-                    <li>Hours of Operation:</li>
-                    <li>8am - 5pm M-F</li>
-                    <li>Phone: 719-481-2954</li>
-                    <li>Fax: 719-884-8011</li>
-                </ul>
-            </aside>
+                    <!--Event 05-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/exposition@2x.png"
+                                alt="Community Expo Picture"
+                            />
+                            <figcaption>
+                                <h3>Business and Community Expo</h3>
+                                <p>October 17, 2019, 4:00pm - 7:00pm</p>
+                            </figcaption>
+                        </figure>
+                    </div>
 
-            <p id="copyright">Copyright © Matt Cushing / Mock Up For http://www.townofmonument.org</p>
+                    <!--Event 06-->
+                    <div class="showcase">
+                        <figure>
+                            <img
+                                class="showcase-image"
+                                src="./images/halloween@2x.png"
+                                alt="Picture of Pumpkin"
+                            />
+                            <figcaption>
+                                <h3>Town Hall Trick or Treat</h3>
+                                <p>October 31, 2019, 3:00pm - 5:00pm</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="event-button button-primary button-small"
+                >
+                    More Upcoming Events
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24.37"
+                        height="18.983"
+                        viewBox="0 0 24.37 18.983"
+                        id="arrow-icon"
+                    >
+                        <g transform="translate(-219.5 -214.017)">
+                            <path
+                                class="a"
+                                d="M24.133,26.177l7.157-7.131a2.34,2.34,0,1,0-3.309-3.309l-3.155,3.155V4.834a2.334,2.334,0,1,0-4.669,0V18.892L17,15.762A2.347,2.347,0,0,0,13,17.4a2.271,2.271,0,0,0,.693,1.642l7.131,7.131a2.333,2.333,0,0,0,1.642.693A2.393,2.393,0,0,0,24.133,26.177Z"
+                                transform="translate(217 246) rotate(-90)"
+                            />
+                        </g>
+                    </svg></button
+                >-->
+            </section>
         </div>
-    </footer>
 
+        <!--Section 03-->
+        <section id="row-3">
+            <article class="meetings">
+                <h1>MEETINGS</h1>
+                <div class="card-underline"></div>
+                <div class="card">
+                    <img
+                        class="business-image"
+                        src="./images/meeting@2x.png"
+                        alt="Picture of Meeting"
+                    />
+                    <ul>
+                        <li>
+                            <span>Town Hall Closed - Columbus Day</span
+                            ><span class="card-detail">Mon Oct 14</span>
+                        </li>
+                        <li>
+                            <span>Monument Municipal Court</span
+                            ><span class="card-detail">Wed Oct 16</span>
+                        </li>
+                        <li>
+                            <span>Board of Trustees Meeting</span
+                            ><span class="card-detail">Mon Oct 21</span>
+                        </li>
+                    </ul>
+                    <button type="button" class="button-secondary button-large">
+                        View All Meetings
+                    </button>
+                </div>
+            </article>
 
+            <article class="projects">
+                <h1>PROJECTS</h1>
+                <div class="card-underline"></div>
+                <div class="card">
+                    <img
+                        src="./images/construction_bw@2x.png"
+                        alt="Picture of Construction"
+                    />
+                    <ul>
+                        <li>
+                            <span>Jackson Creek Townhomes</span
+                            ><span class="card-detail">Under Construction</span>
+                        </li>
+                        <li>
+                            <span>KFC</span
+                            ><span class="card-detail">Approved</span>
+                        </li>
+                        <li>
+                            <span>Sanctuary Pointe PHASE 3</span
+                            ><span class="card-detail">Under Review</span>
+                        </li>
+                    </ul>
+                    <button type="button" class="button-secondary button-large">
+                        View All Ongoing Projects
+                    </button>
+                </div>
+            </article>
+        </section>
 
-    <script type="text/javascript" src="./js/main.js"></script>
-</body>
+        <!--Ads-->
+        <aside id="ads">
+            <img src="./images/ad01@2x.png" alt="Ad #1" />
+            <img src="./images/ad02@2x.png" alt="Ad #2" />
+            <img src="./images/ad03@2x.png" alt="Ad #3" />
+        </aside>
+
+        <footer>
+            <div id="footer-container">
+                <aside id="site-links">
+                    <h3>SITE LINKS</h3>
+                    <div id="site-links-container">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Printer Friendly</a></li>
+                            <li><a href="#">Email Page</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">RSS</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Translate Page</a></li>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <aside id="social-media">
+                    <h3>SOCIAL MEDIA</h3>
+
+                    <div id="icon-container">
+                        <div class="circle-bg">
+                            <a href="https://www.facebook.com">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="36.844"
+                                    height="36.844"
+                                    viewBox="0 0 36.844 36.844"
+                                >
+                                    <path
+                                        class="icon facebook"
+                                        d="M51.809,19H23.035A4.04,4.04,0,0,0,19,23.035V51.809a4.04,4.04,0,0,0,4.035,4.035h13a.594.594,0,0,0,.594-.594V41.9a.594.594,0,0,0-.594-.594H33.554v-3.1h2.478a.594.594,0,0,0,.594-.594v-.974c0-3.129.909-5.718,2.56-7.288a8.022,8.022,0,0,1,5.5-2.03,11.8,11.8,0,0,1,2.336.217v3.289a7.827,7.827,0,0,0-1.492-.137c-2.806,0-4.415,2.1-4.415,5.764v1.159a.594.594,0,0,0,.594.594h4.159l-1.017,3.1H41.754a.594.594,0,0,0-.594.594V55.25a.594.594,0,0,0,.594.594H51.809a4.04,4.04,0,0,0,4.035-4.035V23.035A4.04,4.04,0,0,0,51.809,19Zm2.847,32.809a2.85,2.85,0,0,1-2.847,2.847H42.349V42.491h2.93a.6.6,0,0,0,.565-.409L47.251,37.8a.595.595,0,0,0-.565-.78H42.3v-.564c0-2.087.56-4.576,3.227-4.576a6.079,6.079,0,0,1,1.9.279.595.595,0,0,0,.781-.564V27.064a.594.594,0,0,0-.446-.575,12.394,12.394,0,0,0-3.078-.357,9.219,9.219,0,0,0-6.316,2.356c-1.89,1.8-2.93,4.692-2.93,8.15v.38H32.959a.594.594,0,0,0-.594.594V41.9a.594.594,0,0,0,.594.594h2.478V54.656h-12.4a2.85,2.85,0,0,1-2.847-2.847V23.035a2.85,2.85,0,0,1,2.847-2.847H51.809a2.85,2.85,0,0,1,2.847,2.847Z"
+                                        transform="translate(-19 -19)"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="circle-bg">
+                            <a href="https://www.instagram.com">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="37.229"
+                                    height="37.353"
+                                    viewBox="0 0 37.229 37.353"
+                                >
+                                    <path
+                                        class="icon instagram"
+                                        d="M33.982,37.145a8.677,8.677,0,0,1,15.785,0h6.865V28.778a2.954,2.954,0,0,0-2.946-2.955H37.577v4.294a1.015,1.015,0,1,1-2.03,0V25.823h-.732v4.294a1.015,1.015,0,1,1-2.03,0V25.823h-.868v4.294a1.015,1.015,0,1,1-2.03,0V25.835a2.954,2.954,0,0,0-2.7,2.943v8.367h6.8ZM48.618,29.9a1.261,1.261,0,0,1,1.259-1.263h2.644A1.261,1.261,0,0,1,53.78,29.9v2.652a1.261,1.261,0,0,1-1.259,1.263H49.877a1.261,1.261,0,0,1-1.259-1.263Z"
+                                        transform="translate(-23.294 -21.92)"
+                                    />
+                                    <path
+                                        class="icon instragram"
+                                        d="M86.805,91.489a4.465,4.465,0,1,0,4.465-4.48A4.477,4.477,0,0,0,86.805,91.489Z"
+                                        transform="translate(-72.69 -72.612)"
+                                    />
+                                    <path
+                                        class="icon instagram"
+                                        d="M50.544,109.653c.013.2.023.4.023.6a8.694,8.694,0,1,1-17.387,0c0-.2.009-.4.023-.6H27.183v12.214a2.954,2.954,0,0,0,2.946,2.955H53.685a2.954,2.954,0,0,0,2.946-2.955V109.653Z"
+                                        transform="translate(-23.293 -91.373)"
+                                    />
+                                    <path
+                                        class="b"
+                                        d="M34.893,3.064H11.336A6.855,6.855,0,0,0,4.5,9.923V33.558a6.855,6.855,0,0,0,6.836,6.859H34.892a6.855,6.855,0,0,0,6.836-6.859V9.923A6.855,6.855,0,0,0,34.893,3.064ZM11.095,6.98v4.282a1.015,1.015,0,1,0,2.03,0V6.967h.868v4.294a1.015,1.015,0,1,0,2.03,0V6.967h.732v4.294a1.015,1.015,0,1,0,2.03,0V6.967H34.892a2.954,2.954,0,0,1,2.946,2.955V18.29H30.973a8.677,8.677,0,0,0-15.785,0H8.39V9.923A2.954,2.954,0,0,1,11.095,6.98ZM27.546,21.941a4.465,4.465,0,1,1-4.465-4.48A4.478,4.478,0,0,1,27.546,21.941Zm7.347,14.573H11.336A2.954,2.954,0,0,1,8.39,33.558V21.344H14.41c-.013.2-.023.4-.023.6a8.694,8.694,0,1,0,17.387,0c0-.2-.009-.4-.023-.6h6.087V33.558A2.954,2.954,0,0,1,34.893,36.514Z"
+                                        transform="translate(-4.5 -3.064)"
+                                    />
+                                    <path
+                                        class="b"
+                                        d="M153.422,47.4h2.644a1.261,1.261,0,0,0,1.259-1.263V43.483a1.261,1.261,0,0,0-1.259-1.263h-2.644a1.261,1.261,0,0,0-1.259,1.263v2.652A1.261,1.261,0,0,0,153.422,47.4Z"
+                                        transform="translate(-126.838 -35.505)"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="circle-bg">
+                            <a href="https://www.twitter.com">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="47.982"
+                                    height="35.456"
+                                    viewBox="0 0 47.982 35.456"
+                                >
+                                    <path
+                                        class="icon twitter"
+                                        d="M41.374,9.622c-.227-1.023-1.1-4.584-2.462-5.947L38.8,3.561A10.26,10.26,0,0,0,31.526.038,7.3,7.3,0,0,0,30.616,0c-3.788,0-5.909,2.235-7.462,4.432A16.989,16.989,0,0,0,21.26,8.75a16.785,16.785,0,0,1-2.008,4.47c-1.78,2.424-5,2.879-6.781,2.955h-.341a15.675,15.675,0,0,1-7.046-1.932,17.066,17.066,0,0,1-3.94-3.523L.274,9.7.123,11.023A49.191,49.191,0,0,0-.1,18.107a19.54,19.54,0,0,0,5.758,11.97c3.75,3.6,9.015,5.379,16.023,5.379,10.569,0,15.3-7.614,17.084-10.493a18.54,18.54,0,0,0,2.424-7.917l6.629-4.2Zm-1.25,6.818v.3a17.95,17.95,0,0,1-2.273,7.652c-1.7,2.727-6.174,9.962-16.1,9.962-6.7,0-11.667-1.667-15.228-5.076a18.367,18.367,0,0,1-5.417-11.25,37.979,37.979,0,0,1,.114-5.568,16.782,16.782,0,0,0,3.371,2.8,16.916,16.916,0,0,0,7.576,2.083h.379c1.97-.076,5.606-.606,7.652-3.409a19.033,19.033,0,0,0,2.159-4.773A17.448,17.448,0,0,1,24.1,5.152c1.439-2.121,3.258-4.015,6.515-4.015a6.421,6.421,0,0,1,.833.038A9.23,9.23,0,0,1,38,4.356l.114.114c1.1,1.1,1.97,4.432,2.2,5.644l.038.265,5.19,2.576Z"
+                                        transform="translate(0.168)"
+                                    />
+                                    <path
+                                        class="icon twitter wing"
+                                        d="M36.122,42.7l-1.1.3.076,1.174a10.288,10.288,0,0,1-2.083,6.478c-1.553,1.894-3.94,2.955-7.084,3.22-.417.038-.833.038-1.25.038h0c-5.568,0-8.144-3.068-9.015-4.394l-.53-1.061-1.136.3.265.606c.114.227,2.689,5.644,10.379,5.644h0c.417,0,.871,0,1.326-.038,3.447-.265,6.1-1.477,7.879-3.636a11.658,11.658,0,0,0,2.311-7.993Z"
+                                        transform="translate(-8.633 -26.525)"
+                                    />
+                                    <path
+                                        class="icon twitter eye"
+                                        d="M84.071,14.7a3.371,3.371,0,1,0,3.371,3.371A3.379,3.379,0,0,0,84.071,14.7Zm0,5.568a2.239,2.239,0,0,1-2.235-2.235,2.235,2.235,0,1,1,2.235,2.235Z"
+                                        transform="translate(-50.067 -9.132)"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="circle-bg">
+                            <a href="https://www.youtube.com">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="49.146"
+                                    height="34.024"
+                                    viewBox="0 0 49.146 34.024"
+                                >
+                                    <path
+                                        class="icon youtube"
+                                        d="M58.329,27.5H25.817A8.317,8.317,0,0,0,17.5,35.817v17.39a8.317,8.317,0,0,0,8.317,8.317H58.329a8.317,8.317,0,0,0,8.317-8.317V35.817A8.317,8.317,0,0,0,58.329,27.5ZM44.152,48.293l-7.372,3.78V36.951l7.372,3.78,7.372,3.78Z"
+                                        transform="translate(-17.5 -27.5)"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <aside id="contact">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li>Town of Monument</li>
+                        <li>645 Beacon Lite Road</li>
+                        <li>Monument, CO 80132</li>
+                        <li>Hours of Operation:</li>
+                        <li>8am - 5pm M-F</li>
+                        <li>Phone: 719-481-2954</li>
+                        <li>Fax: 719-884-8011</li>
+                    </ul>
+                </aside>
+
+                <p id="copyright">
+                    Copyright © Matt Cushing / Mock Up For
+                    http://www.townofmonument.org
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
