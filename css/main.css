@@ -27,6 +27,7 @@
 html {
     background-color: var(--bg-color);
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -884,11 +885,114 @@ svg .b {
 }
 
 /*
+ * ─── HALLOWEEN EVENT ────────────────────────────────────────────────────────────
+ */
+
+#halloween-container {
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    column-gap: 5%;
+}
+
+#halloween-article-container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 5%;
+}
+
+#halloween-ads {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+#pumpkin {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1em;
+    object-fit: cover;
+    border-radius: 3px;
+    grid-column: 1 / -1;
+}
+
+.halloween-title {
+    grid-column: 1 / -1;
+    font-family: var(--font-paragraph);
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.halloween-subtitle {
+    grid-column: 1 / -1;
+    font-family: var(--font-paragraph);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.halloween-links {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.article-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: span 3;
+}
+
+.halloween-par {
+    line-height: 1.8rem;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+.halloween-details {
+    margin-bottom: 0;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.halloween-details > strong {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.top {
+    margin-top: 1em;
+}
+
+.halloween-par-full {
+    grid-column: 1 / -1;
+}
+
+.halloween-par-left {
+    grid-column: 1 / 2;
+}
+
+.halloween-par-right {
+    grid-column: 2 / 3;
+}
+
+/*
  * ─── EVENT PAGES ─────────────────────────────────────────────────────────────
  */
 
 main {
     margin: 4rem 13.02vw;
+}
+
+#scroll {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    margin: 1rem 0;
+}
+
+.event-details {
+    font-style: italic;
 }
 
 .event-container {
