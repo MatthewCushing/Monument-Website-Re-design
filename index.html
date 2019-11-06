@@ -477,10 +477,16 @@
                     </button>
 
                     <div class="menu-sub-6 menu-sub">
-                        <div id="menu-column-1">
-                            <h3 class="menu-category">
-                                SEARCH BAR WILL GO IN HERE
-                            </h3>
+                        <div id="search-container">
+                            <form action="https://www.google.com/search" method="get">
+                                <div id="search-background">
+                                    <input type="hidden" name="q" value="site:https://www.townofmonument.org" />
+                                    <input id="search-input" type="text" name="q" placeholder="Search" />
+                                </div>
+                                <div id="search-button-background">
+                                    <input id="search-button" type="submit" value="Submit" />
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
